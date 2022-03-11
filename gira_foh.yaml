@@ -103,9 +103,15 @@ blueprint:
       default: []
       selector:
         action: {}
-    both_buttons_three_and_four_single_press:
-      name: Both buttons 3 + 4 - Single press
-      description: Action to run on a single press of both buttons 3 + 4
+    both_bottom_buttons_single_press:
+      name: Both bottom buttons - Single press
+      description: Action to run on a single press on both bottom buttons
+      default: []
+      selector:
+        action: {}
+    both_bottom_buttons_release:
+      name: Both bottom buttons release
+      description: Action to run on a single release on both bottom buttons
       default: []
       selector:
         action: {}
@@ -181,11 +187,14 @@ action:
     - '{{ event == 5003 }}'
     sequence: !input 'both_buttons_one_and_two_hold_release'
   - conditions:
+    - '{{ event == 6000 }}'
+    sequence: !input 'both_bottom_buttons_single_press'
+  - conditions:
     - '{{ event == 6001 }}'
     sequence: !input 'both_buttons_three_and_four_hold_in'
   - conditions:
     - '{{ event == 6002 }}'
-    sequence: !input 'both_buttons_three_and_four_single_press'
+    sequence: !input 'both_bottom_buttons_release'
   - conditions:
     - '{{ event == 6003 }}'
     sequence: !input 'both_buttons_three_and_four_hold_release'  
