@@ -116,13 +116,13 @@ blueprint:
       selector:
         action: {}
     both_buttons_three_and_four_hold_in:
-      name: Both buttons 3 + 4 - hold in
+      name: Both buttons 2 + 4 - hold in
       description: Action to run when both buttons 3 + 4 held in
       default: []
       selector:
         action: {}
     both_buttons_three_and_four_hold_release:
-      name: Both buttons 3 + 4 - Hold release
+      name: Both buttons 2 + 4 - Hold release
       description: Action to run when both buttons 3 + 4 were held in and released
       default: []
       selector:
